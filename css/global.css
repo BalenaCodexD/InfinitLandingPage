@@ -1,0 +1,66 @@
+/* Importação das Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Paleta de Cores do Cliente */
+  --primary: #0C87F2;
+  --primary-dark: #2E578C;
+  --primary-light: #077AF1;
+  
+  --secondary: #ffd700;
+  
+  /* Cores de Fundo e Texto */
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb; /* gray-50 */
+  --bg-pink-light: #ffd4d4;
+  
+  --text-dark: #111827; /* gray-900 */
+  --text-muted: #4b5563; /* gray-600 */
+  --text-white: #ffffff;
+  --text-danger: #dc2626;
+
+  /* Fontes */
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  /* Espaçamentos e Layout */
+  --container-width: 1280px;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+}
+
+/* Reset Básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografia Básica */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
