@@ -437,3 +437,25 @@ body {
     text-decoration: none;
     color: inherit;
 }
+
+
+
+
+@media (max-width: 768px) {
+    /* Reduz o padding do painel de informações e do formulário no mobile */
+    .contact-info-panel,
+    .contact-form-panel {
+        padding: 1.5rem !important; /* Reduzido de 3rem/3.7rem para 1.5rem */
+    }
+
+    /* Ajusta o tamanho do título para não quebrar em telas pequenas */
+    .contact-title {
+        font-size: 1.5rem;
+    }
+
+    /* Garante que os inputs ocupem a largura correta sem estourar */
+    .form-input {
+        width: 100%;
+        box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    }
+}
