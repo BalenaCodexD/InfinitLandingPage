@@ -459,3 +459,64 @@ body {
         box-sizing: border-box; /* Garante que o padding não aumente a largura total */
     }
 }
+
+
+/* ========================
+   CORREÇÃO FINAL IPHONE (Formulário e Mapa)
+   ======================== */
+@media (max-width: 768px) {
+
+    /* --- 1. CONSERTAR O MAPA DO BRASIL --- */
+    /* Centraliza o container do ícone na tela */
+    .icon-wrapper-lg {
+        width: 160px;       /* Tamanho fixo e seguro para celular */
+        height: 160px;
+        margin: 0 auto 1rem auto; /* Centraliza horizontalmente e dá margem embaixo */
+        display: block;     /* Garante comportamento de bloco para centralizar */
+    }
+
+    /* Ajusta a imagem do mapa dentro do container */
+    .icon-wrapper-lg img[alt="BrasilIcon"] {
+        width: 120% !important; /* Um pouco maior que o container (efeito 3D) */
+        max-width: none;
+        
+        /* Centralização Absoluta Perfeita */
+        left: 50% !important; /* Força o centro (corrige o 40% antigo) */
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* Garante que o texto abaixo fique organizado */
+    .social-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    /* --- 2. CONSERTAR O BOTÃO DO FORMULÁRIO --- */
+    .contact-form-panel .btn-lg {
+        font-size: 0.9rem !important; /* Diminui a fonte para caber em uma linha */
+        padding: 1rem 0.5rem !important; /* Menos preenchimento lateral */
+        white-space: nowrap; /* Tenta manter em uma linha */
+        width: 100%;
+    }
+
+    /* --- 3. CONSERTAR O RECAPTCHA NO IPHONE --- */
+    /* O reCAPTCHA tem 304px, o que quebra telas pequenas. Isso reduz ele. */
+    .g-recaptcha {
+        transform: scale(0.85); /* Reduz para 85% do tamanho original */
+        transform-origin: 0 0;  /* Alinha à esquerda */
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center; /* Tenta centralizar se sobrar espaço */
+    }
+    
+    /* Ajuste extra para centralizar o reCAPTCHA reduzido */
+    .contact-form-panel > div:nth-last-child(2) { 
+        /* Seleciona a div do recaptcha se for a penúltima */
+        display: flex; 
+        justify-content: center; 
+    }
+}
