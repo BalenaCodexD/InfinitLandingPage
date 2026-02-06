@@ -1,6 +1,4 @@
-/* ========================
-   1. UTILITIES & LAYOUT
-   ======================== */
+
 :root {
     /* Define a nova cor de fundo aqui para facilitar */
     --bg-site: #EEF0F3;
@@ -22,14 +20,13 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Cores e Tipografia */
+
 .text-white { color: var(--text-white); }
 .text-dark { color: var(--text-dark); }
 .text-primary { color: var(--primary); }
 .text-bold { font-weight: 700; }
 .text-italic { font-style: italic; }
 
-/* === MUDANÇA AQUI: Fundo agora é #EEF0F3 === */
 .section-light { 
     background-color: var(--bg-site);
     padding: 5rem 0;
@@ -63,9 +60,6 @@ body {
     .grid-2-cols { grid-template-columns: 1fr 1fr; }
 }
 
-/* ========================
-   2. BUTTONS
-   ======================== */
 .btn {
     display: inline-block;
     padding: 0.5rem 1.5rem;
@@ -95,9 +89,6 @@ body {
 .btn-lg { padding: 1rem 2rem; font-size: 1.125rem; }
 .btn-block { width: 100%; display: block; }
 
-/* ========================
-   3. HEADER
-   ======================== */
 .header {
     background-color: var(--bg-white);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -128,24 +119,20 @@ body {
 
     position: absolute;
     
-    /* Centraliza a imagem perfeitamente no meio do quadrado pequeno */
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     
-    /* Define o tamanho que você quer (bem maior que o pai) */
-    height: 3rem; /* Ajuste este valor para o tamanho desejado */
+    height: 3rem; 
     width: auto;
     
-    /* Anula qualquer regra global que esteja travando o crescimento */
+   
     max-width: none !important; 
     max-height: none !important;
 }
 .brand-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; }
 
-/* ========================
-   4. HERO SECTION
-   ======================== */
 .hero-section {
     position: relative;
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -189,7 +176,6 @@ body {
 }
 .icon-circle svg { width: 0.75rem; height: 0.75rem; }
 
-/* Laptop Mockup Hero */
 .laptop-mockup { width: 100%; max-width: 42rem; margin: 0 auto; position: relative; }
 .laptop-screen {
     background-color: #1f2937; border-radius: 1rem 1rem 0 0;
@@ -200,9 +186,6 @@ body {
 .laptop-base { background-color: #374151; height: 1rem; border-radius: 0 0 0.5rem 0.5rem; margin: 0 auto; width: 90%; }
 .laptop-notch { background-color: #4b5563; height: 0.5rem; border-radius: 0 0 0.75rem 0.75rem; margin: 0 auto; width: 60%; }
 
-/* ========================
-   5. CARDS GENÉRICOS (Problems & Features)
-   ======================== */
 .section-title { font-size: 2.25rem; text-align: center; margin-bottom: 1rem; }
 .section-subtitle { text-align: center; opacity: 0.9; max-width: 48rem; margin: 0 auto 3rem auto; }
 .section-footer-text { text-align: center; font-size: 1.125rem; }
@@ -226,18 +209,15 @@ body {
 .feature-card p { color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; }
 .cta-wrapper-center { text-align: center; margin-top: 2rem; }
 
-/* === NOVO: Ajuste específico para o ícone de foguete === */
 .icon-rocket {
     transition: transform 0.3s ease;
 }
-/* Efeito de "decolar" quando passa o mouse no card */
+
 .feature-card:hover .icon-rocket {
     transform: translate(2px, -2px); /* Move levemente para cima e direita */
 }
 
-/* ========================
-6. BENEFITS SECTION (TEXTO + CARD AZUL)
-======================== */
+
 #benefits {
     background-color: #ffffff;
 }
@@ -266,7 +246,6 @@ body {
 }
 .check-icon svg { width: 1rem; height: 1rem; }
 
-/* CARD VISUAL AZUL (#0980F1) */
 .benefits-visual-relative {
     position: relative;
     width: 100%;
@@ -315,9 +294,6 @@ body {
 .label-mid-right { top: 45%; right: -2rem; }
 .label-bottom-left { bottom: 10%; left: 0; }
 
-/* ========================
-   SOCIAL PROOF
-   ======================== */
 .social-proof-section {
     background-color: #0980F1;
     padding: 0;
@@ -351,44 +327,39 @@ body {
 .social-stats { display: flex; align-items: center; gap: 4rem; }
 
 .icon-wrapper-lg {
-    /* Tamanho que o site "pensa" que o ícone tem (pequeno) */
     width: 12rem; 
     height: 12rem;
     
-    /* Removemos estilos antigos */
+ 
     background: transparent;
     box-shadow: none;
     border-radius: 0;
-    padding: 0; /* Garante que não tenha padding extra */
+    padding: 0; 
     
-    /* Define o ponto zero para a imagem flutuar */
+
     position: relative;
     z-index: 10;
 }
 
 .icon-wrapper-lg img[alt="BrasilIcon"] {
-    /* Tira do fluxo para não empurrar nada */
     position: absolute;
     
-    /* Centraliza na âncora */
+
     top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
     
-    /* Tamanho GIGANTE que você quer */
-    width: 15rem; /* Ajuste este valor à vontade */
+    width: 15rem; 
     height: auto;
     
-    /* === O SEGREDO PARA VENCER O GLOBAL.CSS === */
     max-width: none !important; 
     max-height: none !important;
-    
-    /* Sombra para destaque */
+
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
 .highlight { 
-    color: #ffffff; /* Mudado de var(--primary) para branco */
+    color: #ffffff; 
     font-weight: 700; 
     text-decoration: underline;
 }
@@ -399,11 +370,9 @@ body {
 .trust-text { max-width: 28rem; font-size: 0.875rem; opacity: 0.9; text-align: center; }
 @media (min-width: 768px) { .trust-text { text-align: left; } }
 
-/* ========================
-   8. CONTACT FORM
-   ======================== */
+
 .contact-card-wrapper {
-    background-color: white;
+    background-color: var(--primary-dark);
     border-radius: 1.5rem; overflow: hidden;
     max-width: 64rem; margin: 0 auto;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
@@ -448,22 +417,18 @@ body {
         padding: 1.5rem !important; /* Reduzido de 3rem/3.7rem para 1.5rem */
     }
 
-    /* Ajusta o tamanho do título para não quebrar em telas pequenas */
+
     .contact-title {
         font-size: 1.5rem;
     }
 
-    /* Garante que os inputs ocupem a largura correta sem estourar */
+
     .form-input {
         width: 100%;
-        box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+        box-sizing: border-box; 
     }
 }
 
-
-/* ========================
-   CORREÇÃO FINAL IPHONE (Formulário e Mapa)
-   ======================== */
 @media (max-width: 768px) {
 
     /* --- 1. CONSERTAR O MAPA DO BRASIL --- */
@@ -495,7 +460,6 @@ body {
         gap: 1rem;
     }
 
-    /* --- 2. CONSERTAR O BOTÃO DO FORMULÁRIO --- */
     .contact-form-panel .btn-lg {
         font-size: 0.9rem !important; /* Diminui a fonte para caber em uma linha */
         padding: 1rem 0.5rem !important; /* Menos preenchimento lateral */
@@ -504,7 +468,6 @@ body {
     }
 
     /* --- 3. CONSERTAR O RECAPTCHA NO IPHONE --- */
-    /* O reCAPTCHA tem 304px, o que quebra telas pequenas. Isso reduz ele. */
     .g-recaptcha {
         transform: scale(0.85); /* Reduz para 85% do tamanho original */
         transform-origin: 0 0;  /* Alinha à esquerda */
@@ -513,10 +476,11 @@ body {
         justify-content: center; /* Tenta centralizar se sobrar espaço */
     }
     
-    /* Ajuste extra para centralizar o reCAPTCHA reduzido */
+    
     .contact-form-panel > div:nth-last-child(2) { 
-        /* Seleciona a div do recaptcha se for a penúltima */
+        
         display: flex; 
         justify-content: center; 
     }
 }
+

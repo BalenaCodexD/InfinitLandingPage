@@ -13,6 +13,7 @@ body {
     justify-content: center;
     color: white;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .thanks-container {
@@ -34,6 +35,16 @@ body {
     font-weight: 800;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+
+.brand img {
+    height: 30px; 
+    width: auto; 
 }
 
 .main-title {
@@ -77,20 +88,68 @@ body {
     filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3));   
 }
 
-/* Responsividade para Celulares */
 @media (max-width: 968px) {
     .thanks-container {
         flex-direction: column;
         text-align: center;
+        padding-top: 20px;
+        gap: 30px; 
     }
 
-    .next-steps ol {
-        text-align: left;
-        display: inline-block;
+   
+    .brand {
+        justify-content: center;
+        margin-bottom: 30px;
     }
 
     .main-title {
-        font-size: 2rem;
+        font-size: 1.8rem; 
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+ 
+    .next-steps {
+        display: inline-block;
+        text-align: left;
+        max-width: 100%;
+        margin: 0 auto; 
+        padding: 0 15px;
+    }
+
+    
+    .cta-container {
+        margin-top: 30px;
+        margin-bottom: 50px; 
+    }
+
+    .btn-primary {
+        width: 100%;
+        max-width: 320px; 
+        display: block;
+        margin: 0 auto;
+    }
+
+   
+    .image-mockup {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .image-mockup img {
+        max-width: 80%; 
+    }
+
+
+    body::before {
+        width: 300px;
+        height: 300px;
+        top: 0;
+        right: -50px;
+        opacity: 0.4;
     }
 }
 
@@ -105,4 +164,45 @@ body::before {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
+}
+
+
+
+
+.cta-container {
+    margin-top: 35px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ffffff; 
+    color: #1e56f1; 
+    font-family: 'Segoe UI', sans-serif; 
+    font-weight: 700;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 50px; 
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+.btn-primary:hover {
+    background-color: transparent; 
+    color: #ffffff; 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+
+@media (max-width: 968px) {
+    .btn-primary {
+        width: 100%; 
+        max-width: 300px;
+        padding: 15px 20px;
+    }
 }

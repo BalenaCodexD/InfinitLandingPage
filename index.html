@@ -232,33 +232,25 @@
                     <p class="contact-sub">Em poucos minutos você irá acessar a um especialista que vai mostrar como organizar estoque, vendas e financeiro em um só sistema.</p>
                 </div>
 
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-<script>
-    // Função para ativar o botão apenas quando o captcha for marcado
-    function enableBtn(){
-        document.getElementById("btnSubmit").disabled = false;
-        document.getElementById("btnSubmit").classList.remove("btn-disabled"); // Opcional: para estilo
-    }
-</script>
 
                 <div class="contact-form-panel">
-                    <form action="https://formsubmit.co/contatoinfinitsolucoes@gmail.com" method="POST" id="contactForm" class="form-stack">
+                    <form action="https://formsubmit.co/contatoinfinitsolucoes@gmail.com" method="POST" class="form-stack">
+
                         <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+    
+                        <input type="hidden" name="_captcha" value="false">
+    
+                         <input type="text" name="_honey" style="display:none">
+    
                         <input type="hidden" name="_subject" value="Novo Lead: InfinitWeb">
-                        <input type="hidden" name="_captcha" value="false"> 
-                        
-                        <input type="text" name="name" placeholder="Nome" required class="form-input">
-                        <input type="email" name="email" placeholder="Email" required class="form-input">
-                        <input type="tel" name="phone" placeholder="Telefone (Whatsapp)" required class="form-input">
-                        <input type="text" name="company" placeholder="Qual sua empresa?" required class="form-input">
-                        
-                        <div class="g-recaptcha mb-sm" 
-                             data-sitekey="#" 
-                             data-callback="enableBtn">
-                        </div>
-                        
-                        <button type="submit" id="btnSubmit" disabled class="btn btn-white btn-block btn-lg mt-sm" style="cursor: pointer;">Quero meu acesso grátis</button>
+
+                           <input type="text" name="name" placeholder="Nome" required class="form-input">
+                            <input type="email" name="email" placeholder="Email" required class="form-input">
+                             <input type="tel" name="phone" placeholder="Telefone (Whatsapp)" required class="form-input">
+                               <input type="text" name="company" placeholder="Qual sua empresa?" required class="form-input">
+                                 <button type="submit" class="btn btn-white btn-block btn-lg mt-sm" style="cursor: pointer;">
+                                  Quero meu acesso grátis</button>
+
                     </form>
                 </div>
             </div>

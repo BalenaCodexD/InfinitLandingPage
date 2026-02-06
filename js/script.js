@@ -68,5 +68,3 @@ document.querySelector("#goToDownFour").addEventListener("click", function (even
 
     console.log("go to contact form section3");
 });
-
-
